@@ -1,0 +1,12 @@
+<!--pages/suggest/suggest.wxml-->
+<view class="main">
+    <view class="suggest-list">
+        <view class="suggest-list-row" wx:for="{{suggest}}" wx:key="{{index}}">
+            <navigator url="/pages/feeback/feeback">
+                <image class="suggest-list-row-logo" src="{{item.src}}"></image>
+                <text class="suggest-list-row-title">{{item.title}}</text>
+                <image class="toFeeback" src="/assets/images/fanhui.png"></image>
+            </navigator>
+        </view>        
+    </view>
+</view>

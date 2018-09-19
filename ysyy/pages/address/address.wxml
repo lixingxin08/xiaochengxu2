@@ -1,0 +1,15 @@
+<!--pages/address/address.wxml-->
+<view class="main">
+    <view class="address-list">
+        <view class="address-list-left">
+            <text>卓越时代广场3栋1207</text>
+            <text decode="{{true}}">师太&nbsp;&nbsp;美女&nbsp;&nbsp;&nbsp;&nbsp;13686681175</text>
+        </view>
+        <image class="address-list-right" src="/assets/images/fanhui.png"></image>
+    </view>
+    <view class="addAddress">
+        <navigator url="/pages/addAddress/addAddress">
+            <text>+新增地址</text>        
+        </navigator>
+    </view>
+</view> 

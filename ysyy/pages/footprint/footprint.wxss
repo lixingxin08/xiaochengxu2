@@ -1,0 +1,54 @@
+/* pages/footprint/footprint.wxss */
+page{
+    background-color: #f6f6f6;
+    padding-top: 6rpx;
+}
+.footprint-list{
+    position: relative;
+    height: 148rpx;
+    width: 100%;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
+}
+.footprint-list:first-child{
+    border-top: 1px solid #e5e5e5;
+    
+}
+.footprint-list-goods{
+    width: 110rpx;
+    height: 110rpx;
+    margin: 20rpx 0 0 20rpx;
+}
+.footprint-list-title{
+    position: absolute;
+    left: 150rpx;
+    top:20rpx;
+}
+.footprint-list-title>text{
+    font-size: 28rpx;
+    color: #4d4d4d;
+    font-weight: 700;
+}
+.plgun{
+    margin-top: -6rpx;
+}
+.footprint-list-title .footprint-list-title-price{
+    position: absolute;
+    top: 80rpx;
+    font-size: 20rpx;
+    color:#ffcd46;
+    font-weight: 700;
+}
+.footprint-list-date{
+    float: right;
+    margin:24rpx 20rpx 0 0;
+    font-size:24rpx;
+    color: #808080;
+}
+.footprint-list-car{
+    height: 36rpx;
+    width: 36rpx;
+    position: absolute;
+    right: 20rpx;
+    bottom: 30rpx;
+}

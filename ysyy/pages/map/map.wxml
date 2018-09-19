@@ -1,0 +1,2 @@
+<!--pages/map/map.wxml-->
+<map id="myMap"  bindregionchange="regionchange"  markers="{{markers}}" bindregionchange="regionchange" longitude="{{longitude}}" latitude="{{latitude}}"></map>

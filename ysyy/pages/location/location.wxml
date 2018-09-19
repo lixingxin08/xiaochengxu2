@@ -1,0 +1,53 @@
+<!--pages/location/location.wxml-->
+<view class="header clearfix">
+    <view>
+        <image class="location" src='/assets/images/dingwei2.png'></image>
+        <text class="shop">{{locationText}}</text>
+    </view>
+    <view>
+    <view class="location-right"  bindtap="chooseLocation">
+        <image class="relocate" src='/assets/images/relocate.png'></image>
+        <text class="relocateText">重新定位</text>    
+    </view>
+    </view>
+</view>
+<!-- <view class='search'>
+    <input class="search_input" placeholder="输入你的地址"/>
+    <icon type="search" size="15"/>
+</view> -->
+<view class="cells">
+    <view class="item" wx:for="{{shops}}" wx:key="{{index}}">
+        <image class="shop_logo" src="{{item.src}}" mode="aspectFill"/>
+        <view class="meta">
+            <text class="name">{{item.name}}</text>
+            <view class="plgun">
+                <image class='star' wx:for="{{item.fee}}" wx:key="{{index}}" src="/assets/images/haop.png"></image>
+                 <!-- <image class='star' wx:for="{{5-item.fee}}" src="/assets/images/haop01.png"></image>  -->
+                <text style='font-size:24rpx;padding-left:10rpx'>{{item.fee}}.0 | 月销{{item.num}}</text>               
+            </view>
+             <!-- | 配送￥{{item.fee}} -->
+            <text class="dispatch">￥{{item.send}}起送</text>
+        </view>
+        <!-- <view class="score">月销{{item.num}}单</view> -->
+        <view class="distance">{{item.distance}}</view>
+    </view>
+</view>
+<view style="height:90rpx;"></view>
+<view class='tabBar'>
+    <view class='tabBar_nav' bindtap='toIndex'>
+        <image src="/assets/tabs/zhuye01.png"></image>
+        <text>首页</text>
+    </view>
+    <view class='tabBar_nav' bindtap='toCar'>
+        <image src="/assets/tabs/gouwuche01.png"></image>
+        <text class="car">购物车</text>
+    </view>
+    <view class='tabBar_nav' bindtap='toRecommend'>
+        <image src="/assets/tabs/yuding01.png"></image>
+        <text>预定</text>
+    </view>
+    <view class='tabBar_nav' bindtap='toProfile'>
+        <image src="/assets/tabs/wo01.png"></image>
+        <text>我的</text>
+    </view>
+</view>

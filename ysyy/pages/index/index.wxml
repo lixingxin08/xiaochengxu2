@@ -1,0 +1,36 @@
+<!--index.wxml-->
+<view class='header'>
+    <!-- <image class="bg" src="/assets/images/indexbg.png"></image> -->
+    <view>
+        <navigator url="/pages/location/location">
+            <image class="location" src='/assets/images/dingwei.png'></image>
+            <text class="shop">NO.120321</text>
+        </navigator>
+    </view>
+    <view class="search">
+        <view class="search_input" placeholder="百事可乐" bindtap='toSearchlist'>百事可乐</view>
+        <icon type="search" size="15" />
+    </view>
+    <view>
+        <image class="weChat" src='/assets/images/xinxin.png'></image>
+    </view>
+</view>
+<!-- 轮播图 -->
+<view>
+    <swiper class='slides' circular='true' indicator-active-color="#fff" indicator-color="#f2f2f2" autoplay='true' indicator-dots="true" interval="3000" duration="500">
+        <swiper-item>
+            <image class="slides-img" src="/assets/images/banner.png"></image>
+        </swiper-item>
+        <swiper-item>
+            <image class="slides-img" src="/assets/images/banner.png"></image>
+        </swiper-item>
+    </swiper>
+</view>
+<!-- 导航九宫格 -->
+<view class="grids">
+    <!-- hover-class -->
+	<navigator url="/pages/detail/detail?cat={{item.id}}" hover-class="items2"  class="items" data-index='{{index}}' wx:for="{{categories}}" wx:key="{{index}}" >
+		<image src="{{item.image}}"/>
+        <text>{{item.name}}</text>
+	</navigator>
+</view>

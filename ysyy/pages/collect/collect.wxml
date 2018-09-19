@@ -1,0 +1,100 @@
+<!--pages/collect/collect.wxml-->
+<view class='main'>
+    <view class="swiper-tab">  
+        <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">商品</view>  
+        <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">店铺</view>   
+    </view>
+    <!-- 店铺 -->
+    <view wx:if="{{currentTab==1}}" class="collect">
+        <scroll-view  scroll-y style="height:590rpx;width:100%;" >    
+            <view class="collect-list">
+            <view class="collect-list" wx:for="{{8}}" wx:key="{{index}}">
+                <image class="collect-list-goods" src="/assets/images/logo01.png"></image>  
+                <view class="collect-list-title">
+                    <text>卓越时代广场合家欢店（12012）</text>
+                </view>
+                <view class="plgun">
+                    <image class='star' wx:for="{{5}}" wx:key="{{index}}" src="/assets/images/haop.png"></image>
+                    <!-- <image class='star' wx:for="{{5-item.fee}}" src="/assets/images/haop01.png"></image> -->
+                    <text style='font-size:24rpx;padding-left:10rpx'>5.0 | 月售120</text>
+                    <text class="collect-list-sellPrice" style="color:#4d4d4d">起送￥20 | 商家配送</text>                
+                </view>
+                <text class="collect-list-distance">15分钟 | 1.0km</text>  
+            </view>
+            </view>
+        </scroll-view>                    
+    </view>
+    <view wx:else class="collect">
+    <!-- 商品 -->
+        <scroll-view  scroll-y style="height:590rpx;width:100%;" >
+            <view class="collect-list" wx:for="{{8}}" wx:key="{{index}}">
+                <image class="collect-list-goods" src="/assets/images/baiwei.png"></image>  
+                <view class="collect-list-title">
+                    <text>百威啤酒（300ml）</text>
+                </view>
+                <view class="plgun">
+                    <image class='star' wx:for="{{5}}"  wx:key="{{index}}"  src="/assets/images/haop.png"></image>
+                    <!-- <image class='star' wx:for="{{5-item.fee}}" src="/assets/images/haop01.png"></image> -->
+                    <text style='font-size:24rpx;padding-left:10rpx'>5.0 | 月售120</text>
+                    <text class="collect-list-sellPrice">￥6.5</text>                
+                </view>
+                <image class="collect-list-car" src="/assets/images/gouwuche1.png"></image>          
+            </view>
+        </scroll-view>            
+    </view>
+    <!-- 推荐商品 -->
+    <view>
+        <view class='goodsRecommend clearfix'>
+            <swiper class='slides goodsRecommend-slides' autoplay='true' indicator-dots="true" interval="3000" duration="500"  style="width:100%" circular="true">
+                <swiper-item>
+                    <view class="goodsRecommend-title">
+                        <view class='goodsRecommend-line'></view>
+                        <text>商品推荐</text>
+                        <view class='goodsRecommend-line'></view>
+                    </view>
+                    <image class="goodsRecommend-img" src="/assets/images/detail.png"></image> 
+                    <view class="goodsRecommend-detail pr clearfix">
+                        <text class="goodsRecommend-detail-title fl">(好吃点)高纤消化饼</text>
+                        <text class="goodsRecommend-detail-suggest fl">咬上一口，嚼一口,饼干入口即化,细腻可口,唇齿留香</text>
+                        <text class="goodsRecommend-detail-price">￥99</text>
+                        <text class="goodsRecommend-detail-cosPrice">￥99</text>
+                        <text class="goodsRecommend-detail-yuding">立即预定</text>
+                    </view>   
+                </swiper-item>
+                <swiper-item>
+                    <view class="goodsRecommend-title">
+                        <view class='goodsRecommend-line'></view>
+                        <text>商品推荐</text>
+                        <view class='goodsRecommend-line'></view>
+                    </view>
+                        <image class="goodsRecommend-img" src="/assets/images/detail.png"></image> 
+                        <view class="goodsRecommend-detail pr clearfix">
+                        <text class="goodsRecommend-detail-title fl">(好吃点)高纤消化饼</text>
+                        <text class="goodsRecommend-detail-suggest fl">咬上一口，嚼一口,饼干入口即化,细腻可口,唇齿留香</text>
+                        <text class="goodsRecommend-detail-price">￥99</text>
+                        <text class="goodsRecommend-detail-cosPrice">￥99</text>
+                        <text class="goodsRecommend-detail-yuding">立即预定</text>
+                    </view>
+                </swiper-item>
+            </swiper>               
+        </view>
+    </view>
+    <view class='tabBar'>
+        <view class='tabBar_nav' bindtap='toIndex'>
+            <image src="/assets/tabs/zhuye01.png"></image>
+            <text>首页</text>
+        </view>
+        <view class='tabBar_nav' bindtap='toCar'>
+            <image src="/assets/tabs/gouwuche01.png"></image>
+            <text class="car">购物车</text>
+        </view>
+        <view class='tabBar_nav' bindtap='toRecommend'>
+            <image src="/assets/tabs/yuding01.png"></image>
+            <text>预定</text>
+        </view>
+        <view class='tabBar_nav' bindtap='toProfile'>
+            <image src="/assets/tabs/wo01.png"></image>
+            <text>我的</text>
+        </view>
+    </view>    
+</view>

@@ -1,0 +1,18 @@
+<!--pages/feeback/feeback.wxml-->
+<view class="main">
+    <view class='feeback-body'>
+        <textarea placeholder="如果你对我们有什么问题和建议，想法和期望，请联系我们。" value='{{feeback}}'></textarea>
+        <view class="feeback-upload">
+            <image wx:if="{{logo[0]}}" src="{{logo[0]}}" class="feeback-upload-prev"></image>
+            <image wx:if="{{logo[1]}}" src="{{logo[1]}}" class="feeback-upload-prev"></image>
+            <image wx:if="{{logo[2]}}" src="{{logo[2]}}" class="feeback-upload-prev"></image>
+            <view class="feeback-body-upload" catchtap="chooseImageTap">
+                <image src="/assets/images/xiangji.png"></image>   
+                <text>添加照片</text>     
+            </view>    
+        </view>
+    </view>
+    <view class="feeback-body-sub">
+        <text>提交反馈</text>
+    </view>
+</view>

@@ -1,0 +1,204 @@
+@import '../../app.wxss';
+.cart-top{
+    display: flex;
+    position: relative;
+    padding: 28rpx 0 0 0;
+    box-sizing: border-box;
+    height: 88rpx;
+    border-bottom: 1rpx solid #d2ccbf;
+    background-color:#ffffff;
+}
+.cart-top .total-select{
+    position: absolute;
+    left: 20rpx;
+    top: 28rpx;
+}
+.cart-top text{
+    text-indent: 64rpx;
+    font-size: 27rpx;
+    color: rgb(77, 77, 77);
+}
+.cart-top image{
+    position: absolute;
+    top:24rpx;
+    right: 20rpx;
+    width: 42rpx;
+    height: 42rpx;
+}
+.cart-box{
+    position: relative;
+}
+.cart-list{
+    display: flex;
+    height: 210rpx;
+    position: relative;
+    border-bottom: 1px solid #d2ccbf;
+}
+.cart-list .cart-pro-select{
+    position: absolute;
+    left: 20rpx;
+    top: 70rpx;
+    width: 24rpx;
+    height: 24rpx;
+}
+.cart-list .cart-thumb{
+    position: absolute;
+    top: 20rpx;
+    left: 65rpx;
+    width: 162rpx;
+    height: 162rpx;
+}
+.cart-list .cart-pro-name{
+    padding:30rpx 0 0 252rpx;
+    font-size: 28rpx;
+    color: #404040;
+    font-weight: 700;
+}
+.cart-list .cart-pro-price{
+    position: absolute;
+    bottom: 25rpx;
+    right:20rpx;
+    width: 92rpx;
+    height: 44rpx;
+    text-align: center;
+    border-radius: 10rpx;
+    background-color: #e6e6e6;
+}
+.cart-pro-sellPrice{
+    display: block;
+    height: 44rpx;
+    line-height: 44rpx;    
+    font-size: 28rpx;
+    color: #ffcd46;
+}
+.cart-pro-costPrice{
+    text-decoration:line-through;
+    color:#8a8a8a;
+}
+/* 数量选择器 */
+.stepper{
+    position: absolute;
+    left: 252rpx;
+    bottom: 32rpx;
+}
+/* 删除 */
+.cart-del{
+    position: absolute;
+    right: 20rpx;
+    top: 30rpx;
+    text-align: center;
+    font-size: 28rpx;
+    color: rgb(128, 128, 128)
+}
+/* 底部 */
+.cart-footer{
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 90rpx;
+    line-height: 90rpx;
+    padding:0 30rpx 0 80rpx;
+    box-sizing: border-box;
+    border-bottom: 10rpx solid #dcdcdc;
+}
+.cart-footer-left{
+    position: absolute;
+    top:0rpx;
+    left:20rpx;
+}
+.order-icon image,.order-icon navigator{
+  display: block;
+  width: 45rpx;
+  height: 45rpx;
+}
+.cart-join{
+    width: 105rpx;
+    height: 44rpx;
+    float: right;
+    font-size: 28rpx;
+    line-height: 44rpx;
+    text-align: center;
+    border-radius: 8rpx;
+    margin: 26rpx 0 0 60rpx;
+    color: #fff;
+    background-color: #ffcd46;
+}
+.cart-toatl-price{
+    font-size: 28rpx;
+    float: right;
+    color:#ffcd46;
+}
+.cart-no-data{
+    padding:40rpx 0;
+    color: #999;
+    text-align: center;
+}
+/* 底部购买 */
+.buy{
+    height: 78rpx;
+    background-color:#616161; 
+    opacity: .8;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    color: #fff;
+}
+.buy_all{
+    display: flex;
+    position: relative;
+    padding: 18rpx;
+    /* border-bottom: 1px solid #d2ccbf; */
+    background-color:#616161;
+}
+.buy_selectAll{
+    font-size: 26rpx;
+    margin-left: 20rpx;
+    padding-top:4rpx;
+    font-weight: 700;
+}
+.buy_pay{
+    width: 166rpx;
+    background-color: #ffcd46;
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-align: center;
+    color: #fff;
+    line-height: 88rpx;
+    height: 88rpx;
+}
+.buy_price{
+    position: absolute;
+    right: 360rpx;
+    padding-top: 6rpx;
+}
+.buy-toatl-price{
+    float: right;
+}
+.buy-toatl{
+    float: right;
+    font-weight: 700;
+}
+.dian{
+    height: 98rpx;
+    width: 10px;
+}
+.m-t{
+    margin-top: 8rpx;
+}
+.cart-no-run{
+    width: 220rpx;
+    height: 62rpx;
+    border:1px solid #ffcf3d;
+    line-height: 62rpx;
+    border-radius: 8rpx;
+    text-align: center;
+    margin: 0 auto;
+}
+.cart-no-img{
+    display: block;
+    margin: 200rpx auto 0;
+    height: 192rpx;
+    width: 200rpx;
+}

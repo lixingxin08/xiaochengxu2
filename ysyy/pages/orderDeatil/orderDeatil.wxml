@@ -1,0 +1,58 @@
+<!--pages/orderDeatil/orderDeatil.wxml-->
+<view class="main">
+    <view class="main-header">
+        <image class="main-header-logo" src="/assets/images/logo01.png"></image>
+        <text class="main-header-number">订单号：123586455</text>
+        <text class="main-header-status">订单完成</text>
+        <view class="main-header-refund">退货申请</view>
+        <view class="main-header-assess">立即评价</view>        
+    </view>
+    <view class="main-detail">
+        <view class="main-detail-name">
+            <image src="/assets/images/shangdian.png"></image>
+            <text>卓越时代广场合家欢（NO.12021）</text>
+        </view>
+        <view class="main-detail-goods">
+            <view class="main-detail-goods-list pr">
+                <image src="/assets/images/xuehua.png"></image>
+                <text class="main-detail-goods-list-title">蓝月亮3kg（薰衣草味）</text>
+                <text class="main-detail-goods-list-oldPrice">￥5.5</text>
+                <text class="main-detail-goods-list-number">X1</text>
+                <text class="main-detail-goods-list-price">￥3.9</text>
+            </view>
+        </view>
+        <view class="main-detail-status">
+            <view class="main-detail-status-status">
+                <image src="/assets/images/peisong.png"></image>
+                <text class="main-detail-status-status-text">配送方式</text>
+                <text class="main-detail-status-status-right">商家配送</text>
+            </view>
+            <view class="main-detail-status-price">
+                <text class="main-detail-status-price-text">实付</text>
+                <text class="fr main-detail-status-price-right">￥7.8</text>
+            </view>
+        </view>
+        <view class="main-deatil-shops">
+            <image src="/assets/images/dianhua.png"></image>
+            <text class="main-deatil-shops-text">联系卖家</text>
+        </view>
+        <view class="main-detail-info">
+            <view class="main-detail-info-detail">
+                <image src="/assets/images/shangdian.png"></image>      
+                <text>订单信息</text>      
+            </view>
+            <view class="main-detail-info-number">
+                <text class="main-detail-info-left">订单号</text>
+                <text class="main-detail-info-right fr">3265896545</text>
+            </view>
+            <view class="main-detail-info-status">
+                <text class="main-detail-info-left">支付方式</text>
+                <text class="main-detail-info-right fr">微信支付</text>
+            </view>
+            <view class="main-detail-info-time">
+                <text class="main-detail-info-left">支付时间</text>
+                <text class="main-detail-info-right fr">2018.1.23</text>
+            </view>
+        </view>
+    </view>
+</view>

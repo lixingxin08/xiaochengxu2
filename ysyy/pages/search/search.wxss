@@ -1,0 +1,56 @@
+/* pages/search/search.wxss */
+.search-top{
+    height: 90rpx;
+}
+.goback{
+    height: 28rpx;
+    width: 36rpx;
+    position: absolute;
+    top: 32rpx;
+    left:20rpx;
+}
+.search{
+    position: absolute;
+    top: 8rpx;
+    left:0rpx;
+    width: 100%;
+}
+.search .search_input{
+    width: 650rpx;
+}
+.search icon{
+    right:60rpx;
+}
+.search-history{
+    padding:10rpx 0 0 22rpx;
+    margin-bottom: 20rpx;
+    position: relative;
+}
+.search-history-title{
+    display: block;
+    color:#808080;
+    font-size: 28rpx;
+    font-weight: 700;
+}
+.search-history-content{
+    height: 36rpx;
+    width: 630rpx;
+}
+.search-history-content text{
+    margin-right: 20rpx;
+    display: inline-block;
+    padding:0  16rpx;
+    height: 38rpx;
+    font-size: 24rpx;
+    border-radius: 8rpx;
+    line-height: 38rpx;
+    text-align: center;
+    border: 1px solid #ffcc44;
+}
+.del{
+    position: absolute;
+    right: 20rpx;
+    bottom:0rpx;
+    width: 36rpx;
+    height: 36rpx;
+}

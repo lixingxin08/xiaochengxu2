@@ -1,0 +1,15 @@
+<!--pages/relation/relation.wxml-->
+<view class="main">
+    <view class="relation-bg">
+        <image src="/assets/images/lianx.png"></image>
+    </view>
+    <view class="suggest-list">
+        <view class="suggest-list-row" wx:for="{{relation}}" wx:key="{{index}}">
+            <!-- <navigator url="/pages/feeback/feeback"> -->
+                <image class="suggest-list-row-logo" src="{{item.src}}"></image>
+                <text class="suggest-list-row-title">{{item.title}}</text>
+                <text class="call" wx:if="{{item.class=='phone'}}" bindtap='call' class="call">点击拨打</text>
+            <!-- </navigator> -->
+        </view>        
+    </view>
+</view>

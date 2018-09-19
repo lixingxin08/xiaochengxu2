@@ -1,0 +1,21 @@
+<!--pages/backApply/backApply.wxml-->
+<view class="main">
+    <view class="main-top">
+        <view class="main-top-title">
+            <text>全部商品</text>
+            <icon size="16" type="success" color="#ffcd46"  class="total-selectAll" bindtap="selectShop"/>
+        </view>
+        <view class="main-top-list">
+            <image src="/assets/images/xuehua.png"></image>
+            <view class="main-top-list-name">
+                <text>蓝月亮3kg（薰衣草味）</text>
+                <text class="main-top-list-name-number">X1</text>
+            </view>
+            <icon size="16" type="success" color="#ffcd46"  class="total-select" bindtap="selectShop"/>
+            <view class="main-top-list-price">
+                <text class="main-top-list-price-old">￥5.5</text>
+                <text class="main-top-list-price-sell">￥3.9</text>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,15 @@
+<!--pages/recommend/recommend.wxml-->
+<view class="main">
+    <view class="recommend-list pr" wx:for="{{3}}" wx:key="{{index}}">
+        <navigator url='/pages/list/list'>
+            <image class="recommend-list-img" src='/assets/images/detail.png'></image>
+        </navigator>
+        <text class="recommend-list-title">(好吃点)高纤维消化饼</text>
+        <view class="clearfix">
+            <text class="recommend-list-detail">咬上一口,嚼一下,饼干入口而化,细腻可口,唇齿留香</text>        
+        </view>
+        <text class="recommend-list-price">￥99</text>
+        <text class="recommend-list-cosPrice">￥99</text>
+        <text class="recommend-list-buy">立即预定</text>
+    </view>
+</view>

@@ -1,0 +1,62 @@
+/* pages/feeback/feeback.wxss */
+page{
+    height: 100%;
+    background-color: #f2f2f2;
+}
+.feeback-body{
+    height: 310rpx;
+    border-top:1px solid #c5c5c5;
+    background-color: #ffffff;
+    position: relative;
+}
+.feeback-body textarea{
+    width: 100%;
+    padding: 20rpx;
+    font-size: 26rpx;
+    box-sizing: border-box;
+}
+.feeback-upload{
+    display: flex;
+    position: absolute;
+    bottom: 20rpx;
+    left:20rpx;
+}
+.feeback-upload .feeback-upload-prev{
+    height: 118rpx;
+    width: 118rpx;
+}
+.feeback-body-upload{
+    height: 118rpx;
+    width: 118rpx;
+    margin-left:  20rpx;
+    border:1px solid #d4d4d4;
+    border-radius: 12rpx;
+    padding-top: 16rpx;
+}
+.feeback-body image{
+    margin-left: 32rpx;
+    height:52rpx;
+    width:55rpx;
+}
+.feeback-body-upload text{
+    color: #808080;
+    font-size: 24rpx;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.feeback-body-sub{
+    margin:20rpx 20rpx;
+    border-radius: 14rpx;
+    box-sizing: border-box;
+    height: 68rpx;
+    background-color: #ffcf3d;
+}
+.feeback-body-sub text{
+    display: block;
+    color: #fff;
+    font-size: 30rpx;
+    line-height: 68rpx;
+    text-align: center;
+}

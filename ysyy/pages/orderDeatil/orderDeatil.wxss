@@ -1,0 +1,186 @@
+/* pages/orderDeatil/orderDeatil.wxss */
+page{
+    background-color: #f2f2f2;
+}
+.main{
+    padding: 10rpx 20rpx;
+}
+.main-header{
+    padding-top: 14rpx;
+    box-sizing: border-box;
+    height: 340rpx;
+    background-color: #ffffff;
+    margin-bottom: 10rpx;
+}
+.main-header-logo{
+    display: block;
+    height: 120rpx;
+    width: 120rpx;
+    margin:0 auto;
+}
+.main-header text{
+    display: block;
+    text-align: center;
+    margin-top:16rpx;
+}
+.main-header-number{
+    font-size: 28rpx;
+    color: rgb(128,128,128);
+}
+.main-header-status{
+    font-size: 32rpx;
+    color: rgb(77,77,77);
+    font-weight: 700;
+}
+.main-header-refund,.main-header-assess{
+    display: inline-block;
+    margin-right: 42rpx;
+    font-size: 28rpx;
+    color: rgb(77,77,77);
+    border:1px solid #ffcd46;
+    border-radius: 4px;
+    height: 48rpx;
+    width: 164rpx;
+    line-height: 48rpx;
+    text-align: center;
+    margin-top: 26rpx;    
+}
+.main-header-refund{
+    margin-left: 170rpx;
+}
+.main-detail-name{
+    height: 74rpx;
+    background-color: #ffffff;
+    border-bottom: 1px solid #f2f2f2;
+}
+.main-detail-name image,.main-detail-info-detail image{
+    float: left;
+    margin: 22rpx 0 0 20rpx;
+    height: 32rpx;
+    width: 34rpx;
+}
+.main-detail-name text{
+    margin-left: 20rpx;
+    line-height: 74rpx;
+    font-size: 28rpx;
+}
+.main-detail-goods{
+    margin-bottom: 5rpx;
+}
+.main-detail-goods-list{
+    height: 102rpx;
+    background-color: #ffffff;
+    border-bottom: 1px solid #f2f2f2;    
+}
+.main-detail-goods-list image{
+    height: 72rpx;
+    width: 72rpx;
+    float: left;
+    margin: 15rpx 0 0 30rpx;
+}
+.main-detail-goods-list-title{
+    font-size: 24rpx;
+    margin: 12rpx 0 0 20rpx;
+    color: rgb(77,77,77);
+}
+.main-detail-goods-list-oldPrice{
+    font-size: 20rpx;
+    text-decoration: line-through;
+    color: rgb(77,77,77);
+    position: absolute;
+    bottom: 15rpx;
+    left: 115rpx;
+}
+.main-detail-goods-list-number{
+    color: rgb(77,77,77);
+    float: right;
+    margin: 15rpx 190rpx 0 0;
+    font-size: 20rpx;
+}
+.main-detail-goods-list-price{
+    font-weight: 700;
+    position: absolute;
+    right: 20rpx;
+    bottom: 12rpx;
+    font-size: 24rpx;
+    color: rgb(255,205,70);
+}
+.main-detail-status{
+    margin-bottom: 10rpx;
+}
+.main-detail-status-status{
+    height: 74rpx;
+    background-color: #fff;
+    border-bottom: 1px solid #f2f2f2;
+}
+.main-detail-status-status image{
+    height: 34rpx;
+    width: 34rpx;
+    float: left;
+    margin: 20rpx 0 0 18rpx;
+}
+.main-detail-status-status-text{
+    line-height: 74rpx;
+    margin-left: 10rpx;
+    font-size: 28rpx;
+    color: rgb(77,77,77);
+}
+.main-detail-status-status-right{
+    font-size: 24rpx;
+    float: right;
+    margin: 20rpx 20rpx 0 0;
+    color: rgb(255,205,70);
+}
+.main-detail-status-price{
+    font-size: 28rpx;
+    height: 68rpx;
+    line-height: 68rpx;
+    background-color: #fff;
+}
+.main-detail-status-price-text{
+    margin-left:28rpx;
+}
+.main-detail-status-price-right{
+    font-weight: 700;
+    margin-right: 20rpx;
+    color: rgb(255,205,70);    
+}
+.main-deatil-shops{
+    height: 68rpx;
+    background-color: #fff;
+    margin-bottom: 10rpx;
+}
+.main-deatil-shops image{
+    float: left;
+    margin-top: 17rpx;
+    margin-left:276rpx; 
+    height: 34rpx;
+    width: 34rpx;
+}
+.main-deatil-shops-text{
+    margin-left: 12rpx;
+    line-height: 68rpx;
+}
+.main-detail-info-detail{
+    height: 74rpx;
+    background-color: #fff;
+    border-bottom: 1px solid #f2f2f2;    
+}
+.main-detail-info-detail text{
+    line-height: 74rpx;
+    margin-left: 12rpx;
+    font-size: 28rpx;
+}
+.main-detail-info-number,.main-detail-info-status,.main-detail-info-time{
+    height: 64rpx;
+    background-color: #fff;
+    border-bottom: 1px solid #f2f2f2;
+}
+.main-detail-info-left{
+    margin-left: 28rpx;
+    font-size: 24rpx;
+}
+.main-detail-info-right{
+    line-height: 64rpx;
+    margin-right: 28rpx;
+}

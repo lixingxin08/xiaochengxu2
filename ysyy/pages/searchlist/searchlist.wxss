@@ -1,0 +1,148 @@
+/* pages/searchlist/searchlist.wxss */
+page{
+    background-color: #f5f5f5;
+}
+.search-top{
+    height: 90rpx;
+    background-color: #ffffff;
+    margin-bottom: 5rpx;
+    box-sizing: border-box;         
+}
+.goback{
+    height: 32rpx;
+    width: 36rpx;
+    position: absolute;
+    top: 28rpx;
+    left:20rpx;
+}
+.search{
+    position: absolute;
+    top: 0rpx;
+    left:0rpx;  
+}
+.search .search_input{
+    width: 590rpx;
+    height: 56rpx;
+    line-height: 56rpx;
+    color: #4d4d4d;
+    background-color: #fff;
+    box-shadow: 0 0 1px;
+}
+.search icon{
+    right:66rpx;
+}
+.message{
+    position: absolute;
+    right: 24rpx;
+    top: 24rpx;
+    height: 46rpx;
+    width: 46rpx;
+}
+/* 排序方式 */
+.search-way{
+    height: 68rpx;
+    width: 100%;
+    background-color: #fff;
+    margin-bottom: 20rpx;   
+    box-sizing: border-box;     
+}
+.search-way text{
+    display: inline-block;
+    width: 25%;
+    text-align: center;
+    line-height: 68rpx;
+}
+.search-list{
+    display: inline-block;
+    position: relative;
+    background-color: #fff;
+    width: 344rpx;
+    height: 392rpx;
+    margin:0 0 20rpx 20rpx;
+    box-sizing: border-box;    
+}
+.search-list-img{
+    margin:25rpx auto;
+    height: 200rpx;
+    width: 300rpx;
+}
+.search-list-text{
+    margin-top: -20rpx;
+    padding-left: 14rpx;
+    box-sizing: border-box;
+    color:#4d4d4d;
+}
+.plgun{
+    margin:-10rpx 0 0 16rpx;
+}
+.price{
+    position: absolute;
+    padding: 0 0 0 15rpx;
+    box-sizing: border-box;    
+    font-size: 20rpx;
+    color: #f23852;
+    bottom: 23rpx;
+    left: 14rpx;
+}
+.stepper{
+    position: absolute;
+    bottom: 12rpx;
+    right: 12rpx;
+}
+.goodsPay{
+    height:98rpx;
+    width: 100%;
+    position: fixed;
+    bottom:0rpx;
+    border-top: 10rpx solid  #f1f1f1;
+}
+.goods-car{
+    position: relative;
+    float: left;
+    width: 50%;
+    height: 98rpx;
+    background-color: #4d4d4d;
+}
+.goods-car image{
+    position: absolute;
+    bottom: 26rpx;
+    left:18rpx;
+    width: 46rpx;
+    height: 44rpx;
+}
+.goods-car text{
+    padding-right: 56rpx;
+    display: block;
+    height: 98rpx;
+    line-height: 98rpx;
+    color: #fff;
+    text-align: right;
+    font-size: 32rpx; 
+    font-weight: 600;
+}
+.goods-pay{
+    float: right;  
+    width: 50%;
+    height: 98rpx;
+    background-color: #ffcd46;
+}
+.goods-pay text{
+    display: block;
+    height: 98rpx;
+    line-height: 98rpx;
+    color: #fff;
+    text-align: center;
+    font-size: 32rpx;
+    font-weight: 600;    
+}
+.goods-car .goods-car-num{
+    position: absolute;
+    top: -18rpx;
+    left: 66rpx;
+    color: #ffcd46;
+    font-weight: 500;
+}
+.dian{
+    height: 108rpx;
+    width: 20rpx;
+}

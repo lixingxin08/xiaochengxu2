@@ -1,0 +1,100 @@
+<!--pages/list/list.wxml-->
+<view class="main">
+<!-- 头部轮播 -->
+    <view>
+        <swiper class='slides' autoplay='true' indicator-dots="true" interval="3000" duration="500" circular="true">
+            <swiper-item>
+                <view class="goodsPic">
+                    <image src="/assets/images/shiwu.png"></image>
+                </view>
+            </swiper-item>
+            <swiper-item>
+                <view class="goodsPic">
+                    <image src="/assets/images/shiwu.png"></image>
+                </view>
+            </swiper-item>
+        </swiper>  
+    </view>
+    <!-- 商品简介 -->
+    <view class='goodsDetail'>
+        <view class='goodsDetail-list'>
+            <text class='goodsDetail-list-title'>(蓝月亮)亮白增艳洗衣液</text>
+            <text class='goodsDetail-list-detail'>香味:熏衣草香 适用范围：棉麻织物 丝绸、毛料 贴身衣物 净含量：2L以上</text>     
+        </view>
+        <view class="goodsDetail-sales">
+            <text>月销量120 | 好评100%</text>
+        </view>
+        <view  class='goodsDetail-car' bindtap='addCar'>
+            <text>选择规格</text>
+        </view>
+        <view  class='goodsDetail-num'>
+            <image data-id='{{item.id}}' bindtap='addNum' data-index="{{index}}"  class="goodsList_add" src="/assets/images/jia.png"></image>
+            <view   class="goodsList_text">{{addNum}}</view>
+            <image  class="goodsList_jian" src="/assets/images/jian.png" data-index="{{index}}" data-id='{{item.id}}' bindtap='reduceNum'></image>
+        </view>
+        <view class="goodsDetail-price">￥{{price}}</view>
+    </view>
+    <!-- 便利店下方推荐 -->
+    <view wx:if="{{class=='现货'}}">
+        <view class='goodsComment'>
+            <view class='goodsComment-title'>
+                <text>用户评论</text>
+                <text>(好评率100%)</text>
+            </view>
+            <text class='goodsComment-num'>12条评论</text>
+        </view>
+        <view class='goodsRecommend'>
+            <view class="goodsRecommend-title">
+                <view class='goodsRecommend-line'></view>
+                <text>商品推荐</text>
+                <view class='goodsRecommend-line'></view>
+            </view>
+                <image class="goodsRecommend-img" src="/assets/images/detail.png"></image> 
+                <view class="goodsRecommend-detail pr clearfix">
+                    <text class="goodsRecommend-detail-title fl">(好吃点)高纤消化饼</text>
+                    <text class="goodsRecommend-detail-suggest fl">咬上一口，嚼一口,饼干入口即化,细腻可口,唇齿留香</text>
+                    <text class="goodsRecommend-detail-price">￥99</text>
+                    <text class="goodsRecommend-detail-cosPrice">￥99</text>
+                    <text class="goodsRecommend-detail-yuding">立即预定</text>
+                </view>            
+        </view>
+    </view>
+    <!-- 预定详情 -->
+    <view wx:else>
+        <view class="swiper-tab">  
+            <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">商品详情</view>  
+            <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">用户评论</view>   
+        </view>  
+        <view class="swiper-box">
+            <view class="swiper-box-detail" wx:if="{{currentTab==0}}">
+                <image class="swiper-box-detail-img" src="/assets/images/banner.png"></image>
+                <view class="dian"></view>
+            </view>
+            <view wx:else  class="swiper-box-pinglun">
+                <view class="assess-list" wx:for="{{3}}" wx:key="{{index}}">
+                    <image class="assess-list-head" src="/assets/profiles/shitai.png"></image>
+                    <text class="assess-list-name">师太</text>
+                    <text class="assess-list-plgun">店铺：好评 | 配送：好评</text>
+                    <view class="plgun">
+                        <text>商品</text>
+                        <image class='star' wx:for="{{5}}" wx:key="{{index}}" data-plgun="{{index}}"  src="/assets/images/haop.png">
+                        <view class="item" data-plgun="{{index}}" bindtap='setPlgun' style='height: 32rpx;width: 32rpx;margin-top:-32rpx;'></view>
+                        </image>
+                    </view>
+                    <text class="assess-list-text">想了想，还是给好评吧,毕竟快递比较辛苦。</text>
+                    <view class="assess-list-goods">
+                        <image class="assess-list-goods-img" src="/assets/images/qiaokeli.png"></image>
+                    </view>    
+                </view>                
+            </view>
+        </view>
+    </view>
+    <view class='goodsPay'>
+        <view class="goods-car">
+            <text>共￥{{totalPrice}}</text>
+        </view>
+        <view class="goods-pay">
+            <text>立即购买</text>        
+        </view>        
+    </view>
+</view>

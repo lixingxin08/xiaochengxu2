@@ -1,0 +1,26 @@
+<!--pages/search/search.wxml-->
+<view class='main'>
+    <view class="search-top">
+        <view class='search'>
+            <input class="search_input" value="{{prames}}" bindinput="setPrames" auto-focus="true" bindconfirm="toSearchList" placeholder="可口可乐"/>
+            <icon type="search" size="18" bindtap="toSearchList"/>
+        </view>
+    </view>
+    <view class="search-history">
+        <text class="search-history-title">历史搜索</text>
+        <view class="search-history-content">
+            <text>可口可乐</text>
+            <text>啤酒</text>
+            <text>洗衣粉</text>
+        </view>
+        <image class="del" src="/assets/images/shangc.png"></image>    
+    </view>
+    <view class="search-history">
+        <text class="search-history-title">热门搜索</text>
+        <view class="search-history-content">
+            <text>可口可乐</text>
+            <text>啤酒</text>
+            <text>洗衣粉</text>
+        </view>    
+    </view>
+</view>

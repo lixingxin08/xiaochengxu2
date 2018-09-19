@@ -1,0 +1,19 @@
+<!--pages/afterDetail/afterDetail.wxml-->
+<view class="main">
+    <view class="main-price">
+        <text class="main-price-text">退款金额:</text>
+        <text class="main-price-number">￥60</text>
+        <view class="fr main-price-status">退货中</view>
+    </view>
+    <view class="main-detail">
+        <view>订单编号:<text class="main-detail-right">1351212</text></view>
+        <view>退款周期:<text class="main-detail-right">2-4个工作日</text></view>
+        <view>支付方式:<text class="main-detail-right">微信支付</text></view>
+        <view class="main-detail-bottom">退货方式:<text class="main-detail-right">商家取货</text></view>
+    </view>
+    <view class="main-status">
+        <image src="/assets/images/status.png"></image>
+        <text>状态：</text>
+        <text class="main-status-status">等待商家处理</text>
+    </view>
+</view>

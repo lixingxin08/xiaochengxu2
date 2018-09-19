@@ -1,0 +1,87 @@
+/* pages/order/order.wxss */
+.swiper-tab{  
+    width: 100%;  
+    border-bottom: 8rpx solid #f2f2f2;  
+    border-top: 8rpx solid #f2f2f2;
+    text-align: center;  
+    line-height: 80rpx;}  
+.swiper-tab-list{  
+    font-size: 30rpx;  
+    display: inline-block;  
+    width: 16.666%;  
+    color: #777777;  
+}  
+.on{ 
+    background-color: #f0f0ff;  
+}
+
+/* 订单列表 */
+.order-body .order-body-list{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 32rpx 20rpx 32rpx 32rpx;
+    position: relative;
+    border-bottom: 6rpx solid #f2f2f2;
+}
+.order-body-list-logo{
+    width: 108rpx;
+    height: 108rpx;
+}
+.order-body-list-detail{
+    position: absolute;
+    left: 180rpx;
+    top:18rpx;
+}
+.order-body-list text{
+    display: block;
+}
+.order-body-list-detail-title{
+    font-size: 28rpx;
+    font-weight: 600;
+}
+.order-body-list-detail-phone{
+    padding: 0rpx 0 0;
+    font-size: 20rpx;
+    color: #9e9e9e;
+}
+.order-body-list-detail-content{
+    width: 360rpx;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    font-size: 24rpx;
+    color: #808080;
+}
+.order-body-list-detail-price{
+    color: #ffd469;
+    font-size: 24rpx;
+    font-weight: 700;
+}
+/* 订单状态 */
+.order-body-list-state{
+    position: absolute;
+    right: 20rpx;
+    top: 30rpx;
+    text-align: right;
+}
+.order-body-list-state-end{
+    font-size: 24rpx;
+}
+.order-body-list-data{
+    font-size: 20rpx;
+    padding-top: 12rpx;
+    color: #808080;
+}
+.order-body-list-again{
+    margin-top: 96rpx;
+}
+.order-body-list-again text{
+    height: 34rpx;
+    border-radius: 6rpx;    
+    border:1px solid #ffcd46;
+    width: 112rpx;    
+    font-size: 24rpx;
+    color: #ffcd46;
+    line-height: 34rpx;
+    text-align: center;
+}

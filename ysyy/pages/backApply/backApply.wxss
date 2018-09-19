@@ -1,0 +1,58 @@
+/* pages/backApply/backApply.wxss */
+page{
+    background-color: #f2f2f2;
+}
+.main{
+    padding: 10rpx 20rpx 0;
+}
+.main-top{
+    background-color: #fff;
+}
+.main-top-title{
+    height: 74rpx;
+    border-bottom: 1px solid #f2f2f2;
+}
+.main-top-title text{
+    font-size: 28rpx;
+    line-height: 74rpx;
+    margin-left: 20rpx;
+    color: rgb(77, 77, 77);
+}
+.main-top-list{
+    height: 102rpx;
+    border-bottom: 1px solid #f2f2f2;
+}
+.total-selectAll{
+    float: right;
+    margin: 21rpx 33rpx 0 0;
+}
+.main-top-list image{
+    float: left;
+    height: 72rpx;
+    width: 72rpx;
+    margin: 15rpx 0 0 32rpx;
+}
+.main-top-list-name{
+    display: inline-block;
+    font-size: 24rpx;
+}
+.main-top-list-name-number{
+    margin-left:150rpx;
+}
+.main-top-list-price{
+    display: inline-block;
+    width: 250rpx;
+}
+.main-top-list-price-old{
+    color: #5e5e5e;
+    font-size: 18rpx;
+    text-decoration: line-through;
+}
+.main-top-list-price-sell{
+    font-size: 20rpx;
+    color: #ffcd46;
+}
+.total-select{
+    float: right;
+    margin: 35rpx 33rpx 0 0;    
+}

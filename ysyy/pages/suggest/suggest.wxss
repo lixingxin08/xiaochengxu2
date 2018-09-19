@@ -1,0 +1,25 @@
+/* pages/suggest/suggest.wxss */
+.suggest-list-row{
+    height: 78rpx;
+    width: 100%;
+    border-bottom: 1px solid #a3a3a3;
+}
+.suggest-list-row .suggest-list-row-logo{
+    vertical-align: middle;
+    height: 42rpx;
+    width: 42rpx;
+    margin:0 0 0 20rpx;
+}
+.suggest-list-row-title{
+    display: inline-block;
+    margin-left: 20rpx;
+    line-height: 78rpx;
+    font-size: 28rpx;
+    color: #808080;
+}
+.toFeeback{
+    height: 22rpx;
+    width: 12rpx;
+    float: right;
+    margin: 22rpx 20rpx 0 0;
+}

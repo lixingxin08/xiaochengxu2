@@ -1,0 +1,70 @@
+{
+    "pages": [
+        "pages/index/index",        
+        "pages/backApply/backApply",
+        "pages/order/order",
+        "pages/orderDeatil/orderDeatil",
+        "pages/afterDetail/afterDetail",        
+        "pages/customerService/customerService",        
+        "pages/location/location",
+        "pages/comment/comment",
+        "pages/assess/assess",        
+        "pages/collect/collect",
+        "pages/car/car",
+        "pages/footprint/footprint",
+        "pages/coupon/coupon",
+        "pages/relation/relation",
+        "pages/suggest/suggest",
+        "pages/feeback/feeback",
+        "pages/recommend/recommend",
+        "pages/searchlist/searchlist",
+        "pages/detail/detail",
+        "pages/list/list",
+        "pages/address/address",
+        "pages/addAddress/addAddress",
+        "pages/submitOrder/submitOrder",
+        "pages/profile/profile",
+        "pages/search/search",
+        "pages/message/message"
+],
+    "window": {
+        "navigationBarBackgroundColor": "#334466",
+        "navigationBarTextStyle": "white",
+        "backgroundColor": "#eeeeee",
+        "backgroundTextStyle": "dark",
+        "enablePullDownRefresh": false
+    },
+    "tabBar": {
+        "backgroundColor": "#fff",
+        "color": "#808080",
+        "selectedColor":"#808080",
+        "backgroundTextStyle": "dark",
+        "position": "bottom",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "首页",
+                "iconPath": "/assets/tabs/zhuye01.png",
+                "selectedIconPath": "/assets/tabs/zhuye02.png"
+            },
+            {
+                "pagePath": "pages/car/car",
+                "text": "购物车",
+                "iconPath": "/assets/tabs/gouwuche01.png",
+                "selectedIconPath": "/assets/tabs/gouwuche02.png"
+            },
+            {
+                "pagePath": "pages/recommend/recommend",
+                "text": "预定",
+                "iconPath": "/assets/tabs/yuding01.png",
+                "selectedIconPath": "/assets/tabs/yuding02.png"
+            },
+            {
+                "pagePath": "pages/profile/profile",
+                "text": "个人中心",
+                "iconPath": "/assets/tabs/wo01.png",
+                "selectedIconPath": "/assets/tabs/wo02.png"
+            }
+        ]
+    }
+}

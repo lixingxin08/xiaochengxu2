@@ -1,0 +1,60 @@
+<view class="main">
+    <view wx:if="{{hasList}}">
+        <view wx:for="{{shops}}" wx:key="{{index}}" wx:for-index="idx" wx:if="{{shops[idx].carts.length}}">
+            <view class="cart-top">
+                <icon wx:if="{{selectShopStatus[idx]}}" size="16" type="success" color="#ffcd46" data-idx="{{idx}}" class="total-select" bindtap="selectShop"/>
+                <icon wx:else type="circle" color="#e3e3e3" size=" 16" data-idx="{{idx}}" class="total-select" bindtap="selectShop"/>
+                <text>{{item.title}}</text>
+                <image src="/assets/images/shangc.png"></image>
+            </view>
+            <view class="cart-box">
+                <view class="cart-list" wx:for="{{item.carts}}" wx:key="{{index}}">
+                    <icon wx:if="{{item.selected}}" type="success" size="16" color="#ffcd46" data-idx="{{idx}}"  data-index="{{index}}"  class="cart-pro-select" bindtap="selectList"/>
+                    <icon wx:else type="circle" class="cart-pro-select" data-idx="{{idx}}" data-index="{{index}}" bindtap="selectList" size="16" />
+                    <navigator url="">
+                        <image class="cart-thumb" src="{{item.image}}"></image>
+                    </navigator>
+                    <text class="cart-pro-name">{{item.title}}</text>
+                    <view class="cart-pro-price">
+                        <text class="cart-pro-sellPrice">￥{{item.sellPrice}}</text>
+                    </view>
+                    <view class="stepper">
+                            <image  bindtap="addCount" data-idx="{{idx}}" data-index="{{index}}"  class="goodsList_add" src="/assets/images/jia.png"></image>
+                            <view   class="goodsList_text">{{item.num}}</view>
+                            <image  bindtap="minusCount" data-obj="{{obj}}" data-idx="{{idx}}" data-index="{{index}}" class="goodsList_jian" src="/assets/images/jian.png"></image>
+                    </view>
+                    <text class="cart-del" bindtap="deleteList" data-idx="{{idx}}" data-index="{{index}}">删除</text>
+                </view>
+            </view>
+            <view class="cart-footer">
+                <view class='cart-footer-left'>
+                    <text class='priceFont'>20</text>
+                    <text>起送还差</text>
+                    <text class='priceFont'>{{between[idx]}}</text>
+                    <text>元</text>
+                </view>
+                <view class='cart-join'>去凑单</view>
+                <text class="cart-toatl-price priceFont">￥{{shopsPrice[idx]}}</text>
+                <text class="cart-toatl-price" style="color:#4d4d4d;">合计</text>
+            </view>
+        </view>
+        <view class="dian"></view>
+        <view class="buy">
+            <view class='buy_all'>
+                <icon wx:if="{{selectAllStatus}}" size="16" type="success" color="#ffcd46"   class="cart-pro-select m-t" bindtap="selectAll"/>
+                <icon wx:else type="circle" size="16" class="cart-pro-select"  bindtap="selectAll m-t"/>
+                <text class="buy_selectAll">全选</text>
+                <view class="buy_pay" catchtap='toSubOrder'>结算</view>
+                <view class="buy_price">
+                    <text class='buy-toatl-price'>￥{{totalPrice}}</text>
+                    <text class='buy-toatl'>总计:</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view wx:else>
+        <image class="cart-no-img" src="/assets/images/nocar.png"></image>
+        <view class="cart-no-data">购物车是空的哦~T.T</view>
+        <view class="cart-no-run">去逛逛</view>
+    </view>
+</view>

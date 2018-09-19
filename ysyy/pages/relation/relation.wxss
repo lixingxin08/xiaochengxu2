@@ -1,0 +1,41 @@
+/* pages/relation/relation.wxss */
+.relation-bg{
+    width: 100%;
+}
+.relation-bg image{
+    width: 100%;
+}
+.suggest-list-row{
+    height: 78rpx;
+    width: 100%;
+    border-bottom: 1px solid #a3a3a3;
+}
+.suggest-list-row .suggest-list-row-logo{
+    vertical-align: middle;
+    height: 42rpx;
+    width: 40rpx;
+    margin:0 0 0 20rpx;
+}
+.suggest-list-row-title{
+    display: inline-block;
+    margin-left: 20rpx;
+    line-height: 78rpx;
+    font-size:30rpx;
+    color: #808080;
+    font-weight: 600;
+}
+.toFeeback{
+    height: 22rpx;
+    width: 12rpx;
+    float: right;
+    margin: 22rpx 20rpx 0 0;
+}
+.call{
+    font-size: 30rpx;
+    float: right;
+    text-align: right;
+    line-height: 78rpx;
+    width: 300rpx;
+    color: #ffcd46;
+    padding: 0 20rpx 0 0 ;
+}

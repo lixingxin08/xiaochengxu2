@@ -1,0 +1,35 @@
+<!--pages/customerService/customerService.wxml-->
+<view class="main">
+    <view class="main-list">
+        <view class="main-list-top pr">
+            <image src="/assets/images/shangdian.png"></image>
+            <text class="main-list-top-title">卓越时代广场合家欢(NO.12021）</text>
+            <text class="fr main-list-top-data">2018.1.20</text>
+            <view class="main-list-top-goods">
+                <text>可口可乐、</text>
+                <text>可口可乐、</text>
+                <text>可口可乐</text>                
+            </view>
+            <text class="main-list-top-status">退货中</text>
+            <view class="main-list-top-price">
+                <text class="main-list-top-price-text">退款金额:</text>            
+                <text class="main-list-top-price-number">￥60</text>
+            </view>
+            <view class="main-list-top-button fr">
+                <view class="main-list-top-button-cancel">
+                    <text>取消退货</text>
+                </view>
+                <view class="main-list-top-button-detail">
+                    <navigator url='/pages/afterDetail/afterDetail'>
+                        <text>查看详情</text>                    
+                    </navigator>
+                </view>
+            </view>
+        </view>
+        <view class="main-list-bottom">
+            <image src="/assets/images/status.png"></image>
+            <text>状态:</text>
+            <text class="main-list-bottom-status">等待商家处理</text>
+        </view>
+    </view>
+</view>

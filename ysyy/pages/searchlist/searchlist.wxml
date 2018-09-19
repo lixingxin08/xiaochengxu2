@@ -1,0 +1,46 @@
+<!--pages/searchlist/searchlist.wxml-->
+<view class='main'>
+    <view class="search-top">
+        <view class='search'>
+            <view class="search_input" placeholder="可口可乐" bindtap='toSearchlist'>可口可乐</view>
+            <icon type="search" size="15"/>
+        </view> 
+        <image class="message" src="/assets/images/xinxin.png"></image>
+    </view>
+    <view class="search-way">
+        <text>综合排序</text>
+        <text>销量排序</text>
+        <text>价格排序</text>
+        <text>筛选</text>
+    </view>
+    <view class="search-list" wx:for="{{goods}}" wx:key="{{index}}">
+        <navigator url="/pages/list/list?title=item.name" hover-class='none'>
+            <image class="search-list-img" src="/assets/images/shiwu.png"></image>        
+        </navigator>
+        <view class="search-list-text">
+            <text>LAYS乐事(美国经典原味）</text>
+        </view>
+        <view class="plgun fl">
+            <image class='star' wx:for="{{5}}" wx:key="{{index}}" src="/assets/images/haop.png"></image>
+            <!-- <image class='star' wx:for="{{5-item.fee}}" src="/assets/images/haop01.png"></image> -->
+            <text style='font-size:20rpx;padding-left:10rpx'>5.0 | 月销量1365</text>
+        </view>
+        <text class="price fl">￥{{item.sellPrice}}</text>
+        <view class="stepper fr">
+                        <image data-id='{{item.id}}' bindtap='addCar' data-index="{{index}}"  class="goodsList_add" src="/assets/images/jia.png"></image>
+                        <view  class="goodsList_text">{{item.num}}</view>
+                        <image  class="goodsList_jian" src="/assets/images/jian.png" data-index="{{index}}" data-id='{{item.id}}' bindtap='jianCar'></image>
+        </view>
+    </view>
+    <view class="dian"></view>
+    <view class='goodsPay'>
+        <view class="goods-car">
+            <text wx:if="{{totalNum>=1}}" class="goods-car-num">+{{totalNum}}</text>
+            <image src="/assets/images/car.png" ></image>
+            <text>共￥{{totalPrice}}</text>
+        </view>
+        <view class="goods-pay">
+            <text>立即购买</text>        
+        </view>        
+    </view>
+</view>

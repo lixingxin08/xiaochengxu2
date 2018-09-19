@@ -1,0 +1,26 @@
+<!--pages/profile/profile.wxml-->
+<view class="main">
+    <view class="profile-top">
+        <view class="profile-top-beijing">
+            <image class="profile-top-beijing-img"  src="{{userInfo.avatarUrl}}"></image>    
+        </view>
+        <image class='profile-top-userImg' src="{{userInfo.avatarUrl}}"></image>
+        <view class='profile-top-userName'>
+            <text >{{userInfo.nickName}}</text>
+        </view>
+         <view class="profile-top-location">
+            <navigator url="/pages/address/address">
+                <image src='/assets/profiles/location.png'></image>
+                <text>收货地址：点击编辑</text>
+            </navigator>
+        </view>
+    </view>
+    <view class="profile-main">
+        <navigator hover-class="none" wx:for="{{profileList}}" wx:key="{{index}}" url="{{item.url}}" >
+            <view class="profile-list">
+                <image class='profile-list-icon' src='{{item.src}}'></image>
+                <text>{{item.title}}</text>
+            </view>
+        </navigator>
+    </view>
+</view>

@@ -1,0 +1,96 @@
+/* pages/customerService/customerService.wxss */
+page{
+    background-color: #f2f2f2;
+}
+.main{
+    padding: 10rpx 20rpx 0;
+}
+.main-list{
+    height: 226rpx;
+    background-color: #fff;
+    margin-bottom: 12rpx;
+}
+.main-list-top{
+    height: 170rpx;
+    border-bottom: 1px solid #f2f2f2;
+}
+.main-list-top image{
+    height: 30rpx;
+    width:34rpx;
+    float: left;
+    margin: 16rpx 0 0 20rpx;
+}
+.main-list-top-title{
+    font-size: 28rpx;
+    position: absolute;
+    top: 10rpx;
+    left: 74rpx;
+    color: rgb(77, 77, 77);
+}
+.main-list-top-data{
+    font-size: 24rpx;
+    margin: 16rpx 20rpx 0  0;
+    color: rgb(128, 128, 128);
+}
+.main-list-top-goods{
+    display: inline-block;
+    margin-top: 18rpx;
+    padding-left: 76rpx;
+    width: 500rpx;
+    font-size: 20rpx;
+    color: rgb(128, 128, 128);
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+.main-list-top-status{
+    position: absolute;
+    top: 62rpx;
+    right: 20rpx;
+}
+.main-list-top-price{
+    display: inline-block;
+    font-size: 24rpx;
+    margin-top: 12rpx;
+    padding-left: 76rpx;
+}
+.main-list-top-price-text{
+    color: rgb(77, 77, 77);
+}
+.main-list-top-price-number{
+    margin-left: 20rpx;
+    color: rgb(255, 205, 70);
+}
+.main-list-top-button view{
+    display: inline-block;
+    color: #ffcf3d;
+    margin-top: 18rpx;
+}
+.main-list-top-button-cancel text,.main-list-top-button-detail text{
+    display: block;
+    width: 112rpx;
+    height: 36rpx;
+    line-height: 36rpx;
+    text-align: center;
+    border-radius: 3px;
+    border: 1px solid #ffcf3d;    
+}
+.main-list-top-button-cancel{
+    margin-right: 30rpx;
+}
+.main-list-top-button-detail{
+    margin-right: 20rpx;
+}
+.main-list-bottom image{
+    width: 32rpx;
+    height: 32rpx;
+    float: left;
+    margin: 12rpx 0 0 74rpx;
+}
+.main-list-bottom text{
+    margin-left: 12rpx;
+    line-height: 54rpx;
+}
+.main-list-bottom-status{
+    color: rgb(255, 205, 70);
+}

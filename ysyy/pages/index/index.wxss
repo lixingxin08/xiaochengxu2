@@ -1,0 +1,110 @@
+/**index.wxss**/
+.header{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    flex-wrap:wrap;
+    z-index: 2;
+    top: 0;
+    height: 88rpx; 
+    /* background-color: #000; */
+}
+/* 定位 */
+.bg{
+    height: 100rpx;
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+.header .location{
+    width: 34rpx;
+    height: 40rpx;
+    position: absolute;
+    left:22rpx;
+    top: 22rpx;
+}
+.shop{
+    font-size: 28rpx;
+    font-weight: 500;
+    position: absolute;
+    color: #fff;
+    left: 72rpx;
+    top: 0rpx;
+    height: 88rpx;
+    line-height: 88rpx;
+}
+/* 搜索框 */
+.search {
+    display: flex;
+    width: 474rpx;
+    position: absolute;
+    right:79rpx;
+    top: 2rpx;
+}
+
+.search icon {
+    position: absolute;
+    right: 45rpx;
+    top: 30rpx;
+    z-index: 11;
+}
+.search .search_input{
+    height: 50rpx;
+    line-height: 50rpx;
+    margin: 15rpx 30rpx;
+    padding: 5rpx 20rpx;
+    border-radius: 34rpx;
+    background-color: rgb(242,242,242);
+    font-size: 30rpx;
+    color: #808080;
+}
+.header .weChat{
+    width: 40rpx;
+    height: 40rpx;
+    position: absolute;
+    right:28rpx;
+    top: 24rpx;
+}
+/* 轮播图 */
+.slides{
+    height: 352rpx;
+    width: 750rpx;
+    background-color: #000;
+}
+.slides image{
+    width: 750rpx;
+    height:352rpx;
+}
+/* 九宫格导航栏 */
+.grids {
+    border-top: 1rpx solid #eee;
+    padding-top: 20rpx;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-around;
+}
+.grids .items{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom:20rpx; 
+    align-items: center;
+    width: 30%;
+    height:250rpx;
+    /* border-radius: 60rpx; */
+    box-sizing: border-box;
+}
+.items2{
+    border: 1px solid #eee;
+    border-radius: 15%;
+    box-shadow:#eee 0px 0px 15px;
+    background-color: #f1f1f1;
+}
+.grids .items image {
+    width: 72rpx;
+    height:72rpx;
+}
+.grids .items text {
+    margin-top: 20rpx;
+    font-size: 28rpx;
+}

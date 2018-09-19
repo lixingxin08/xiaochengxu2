@@ -1,0 +1,33 @@
+/* pages/coupon/coupon.wxss */
+.coupon{
+    padding: 8rpx 20rpx 0rpx 20rpx;
+}
+.swiper-tab{  
+    width: 100%;  
+    text-align: center; 
+    line-height: 80rpx;}  
+.swiper-tab-list{  
+    font-size: 30rpx;  
+    display: inline-block;  
+    width: 25%;  
+    color: #777777;
+    background-color: #f1f1f1;
+}
+
+.coupon-list{
+    border-radius: 35rpx;
+}
+.coupon-list-img{
+    height: 200rpx;
+    width: 706rpx;
+}
+.on{ 
+   background-color:  #fff;
+}  
+  
+.swiper-box{ 
+    display: block; 
+    height: 100%; 
+    width: 100%; 
+    overflow: hidden; 
+}  

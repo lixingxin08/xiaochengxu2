@@ -1,0 +1,28 @@
+<!--pages/addAddress/addAddress.wxml-->
+<view class="main">
+    <view class="address-list">
+        <view class="address-list-line">
+            <text>联系人</text>
+            <input class="input-text" placeholder='姓名' type="text"></input>
+        </view>
+        <view class="sex">
+            <text bindtap='selectGentleman' class="{{select=='gentleman'?'on':''}}">先生</text>
+            <text bindtap='selectLady' class="{{select=='lady'?'on':''}}">女士</text>            
+        </view>
+        <view class="address-list-line phone">
+            <text>电话</text>
+            <input class="input-text" placeholder='号码' type="number"></input>
+        </view>
+        <view class="address-list-line">
+            <text>地址</text>
+            <input class="input-text" placeholder='卓越时代广场' type="text"></input>
+        </view>
+        <view class="address-list-line">
+            <text>门牌号</text>
+            <input class="input-text" placeholder='例：55号2021室' type="text"></input>
+        </view>
+    </view>
+    <view class="enter">
+        <text>确定</text>
+    </view>
+</view>

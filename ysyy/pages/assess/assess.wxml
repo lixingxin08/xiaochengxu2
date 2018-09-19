@@ -1,0 +1,54 @@
+<!--pages/assess/assess.wxml-->
+<view class="main">
+    <view class="assess-tap clearfix">
+        <view class="assess-tap-list" data-index="0" bindtap='setClass'>
+            <text class="assess-tap-text  {{classIndex==0?'on':''}}">全部（120）</text>
+        </view>
+        <view class="assess-tap-list" data-index="1" bindtap='setClass'>
+            <text class="assess-tap-text {{classIndex==1?'on':''}}" >好评（60）</text>
+        </view>
+        <view class="assess-tap-list" data-index="2" bindtap='setClass'>
+            <text class="assess-tap-text {{classIndex==2?'on':''}}"  >吐槽（30）</text>
+        </view>
+        <view class="assess-tap-list" data-index="3" bindtap='setClass'>
+            <text class="assess-tap-text {{classIndex==3?'on':''}}">有图（30）</text>
+        </view>               
+    </view> 
+    <view class="assess-list" wx:for="{{assess}}" wx:key="{{index}}">
+        <image class="assess-list-head fl" src="{{item.userImg}}"></image>
+        <text class="assess-list-name">{{item.name}}</text>
+        <text class="assess-list-plgun">店铺：好评 | 配送：好评</text>
+        <text class="assess-list-date fr">{{item.date}}</text>
+        <text  class="zan" wx:if="{{zan[index]}}" animation="{{animationData}}">+1</text>
+        <image data-index='{{index}}' bindtap="animateNum" class="assess-list-praise" src="/assets/images/dianzan.png"></image>
+        <text class="assess-list-praise-num">({{item.praise}})</text>
+        <view class="plgun">
+            <text>商品</text>
+            <image class='star' wx:for="{{item.xin}}" wx:key="{{index}}" data-plgun="{{index}}"  src="/assets/images/haop.png">
+            <view class="item" data-plgun="{{index}}" bindtap='setPlgun' style='height: 32rpx;width: 32rpx;margin-top:-32rpx;'></view>
+            </image>        
+        </view>    
+        <text class="assess-list-text">{{item.detail}}</text>
+        <view wx:if="{{item.assImg}}"  class="assess-list-goods">
+            <image  class="assess-list-goods-img" src="{{item.assImg}}"></image>
+        </view>
+    </view>
+    <view class='tabBar'>
+        <view class='tabBar_nav' bindtap='toIndex'>
+            <image src="/assets/tabs/zhuye01.png"></image>
+            <text>首页</text>
+        </view>
+        <view class='tabBar_nav' bindtap='toCar'>
+            <image src="/assets/tabs/gouwuche01.png"></image>
+            <text class="car">购物车</text>
+        </view>
+        <view class='tabBar_nav' bindtap='toRecommend'>
+            <image src="/assets/tabs/yuding01.png"></image>
+            <text>预定</text>
+        </view>
+        <view class='tabBar_nav' bindtap='toProfile'>
+            <image  src="/assets/tabs/wo01.png"></image>
+            <text>我的</text>
+        </view>
+    </view>
+</view>

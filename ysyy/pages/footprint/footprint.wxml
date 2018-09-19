@@ -1,0 +1,19 @@
+<!--pages/footprint/footprint.wxml-->
+<view class="main">
+    <view class="footprint">
+        <view class="footprint-list" wx:for="{{5}}" wx:key="{{index}}">
+            <image class="footprint-list-goods" src="/assets/images/baiwei.png"></image>
+            <view class="footprint-list-title">
+                <text>百威啤酒</text>
+                <view class="plgun">
+                    <image class='star' wx:for="{{5}}" wx:key="{{index}}" src="/assets/images/haop.png"></image>
+                    <!-- <image class='star' wx:for="{{5-item.fee}}" src="/assets/images/haop01.png"></image> -->
+                    <text style='font-size:24rpx;padding-left:10rpx'>5.0</text>         
+                </view>
+                <text class="footprint-list-title-price">￥6.5</text>
+            </view>
+            <text class="footprint-list-date">2017.12.12</text>
+            <image class="footprint-list-car" src="/assets/images/gouwuche1.png"></image>
+        </view>
+    </view>
+</view>

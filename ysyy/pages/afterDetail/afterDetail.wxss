@@ -1,0 +1,66 @@
+/* pages/afterDetail/afterDetail.wxss */
+page{
+    background-color: #f2f2f2;
+}
+.main{
+    padding: 10rpx 20rpx;
+}
+.main-price{
+    border-bottom: 1px solid #f2f2f2;
+    height: 65rpx;
+    background-color: #fff;
+    padding-left: 20rpx;
+}
+.main-price text{
+    font-size: 28rpx;
+    line-height: 65rpx;
+}
+.main-price-text{
+    color: rgb(77, 77, 77);
+}
+.main-price-number{
+    margin-left: 20rpx;
+    color: rgb(255, 205, 70);
+}
+.main-price-status{
+    font-size: 24rpx;
+    color: #fff;
+    background-color: #ffcd46;
+    height: 40rpx;
+    width: 118rpx;
+    line-height: 40rpx;
+    text-align: center;
+    border-radius: 4px;
+    margin: 14rpx 20rpx 0 0;
+}
+.main-detail{
+    padding: 1rpx 0 20rpx 20rpx;
+    height: 179rpx;
+    background-color: #fff;
+    border-bottom: 1px solid #f2f2f2;    
+}
+.main-detail view{
+    margin-top: 10rpx;
+    font-size: 24rpx;
+    color: rgb(128, 128, 128);
+}
+.main-detail-right{
+    margin-left: 16rpx;
+}
+.main-status{
+    height: 53rpx;
+    background-color: #ffffff;
+}
+.main-status image{
+    width: 34rpx;
+    height: 34rpx;
+    float: left;
+    margin: 10rpx 0 0 22rpx;
+}
+.main-status text{
+    margin-left: 12rpx;
+    line-height: 54rpx;
+}
+.main-status-status{
+    color: rgb(255, 205, 70);
+}

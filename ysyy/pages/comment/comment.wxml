@@ -1,0 +1,36 @@
+<!--pages/comment/comment.wxml-->
+<view class="main">
+    <view class="comment-body">
+        <view class="comment-body-content">
+            <view class="comment-body-content-comment">
+                <text>商品评价</text>
+                <text>可口可乐</text>
+                <text>商品评分</text>
+                <view class="plgun">
+                    <image class='star' wx:for="{{5}}" wx:key="{{index}}" data-plgun="{{index}}"  src="{{plgun>index?'/assets/images/haop.png':'/assets/images/haop01.png'}}">
+                        <view class="item" data-plgun="{{index}}" bindtap='setPlgun' style='height: 52rpx;width: 52rpx;margin-top:-52rpx;'></view>
+                    </image>
+                </view>
+                <view class="comment-body-content-bottom">
+                    <textarea class="comment-body-content-bottom-text" placeholder='说说你对产品的意见，让别人有更好的选择'></textarea>
+                    <view class='comment-body-content-bottom-bg'>
+                        <image src="/assets/images/xiangji.png"></image>      
+                        <text class="comment-body-content-bottom-add">添加图片</text>                  
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="comment-body-foot">
+            <text class="comment-body-foot-comment">商家评价</text>
+            <text class="comment-body-foot-shops">商家服务:</text>
+            <text class="comment-body-foot-plung {{shopGood==1?'on':''}}" bindtap='setGood'>好评</text>
+            <text class="comment-body-foot-plung {{shopGood==0?'on':''}}" bindtap='setGood'>差评</text>
+            <text class="comment-body-foot-shops">商家配送:</text>
+            <text class="comment-body-foot-plung {{shopDispath==1?'on':''}}"  bindtap='setDispath'>好评</text>
+            <text class="comment-body-foot-plung {{shopDispath==0?'on':''}}"  bindtap='setDispath'>差评</text> 
+        </view>
+    </view>
+    <view class="enter">
+        <text>确定</text>
+    </view>
+</view>

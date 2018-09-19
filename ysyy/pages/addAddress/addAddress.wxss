@@ -1,0 +1,58 @@
+/* pages/addAddress/addAddress.wxss */
+.main{
+    padding: 28rpx 0 0 20rpx;
+}
+.address-list text{
+    font-size: 32rpx;
+    color:#4d4d4d;
+    font-weight: 700;
+}
+.input-text{
+    position: absolute;
+    font-size: 28rpx;
+    padding-left: 16rpx;
+    top: 0;
+    left: 130rpx;
+    border-bottom: 1px solid #d3d3d3;
+    width: 560rpx;
+}
+.address-list-line{
+    height: 80rpx;
+    position: relative;
+}
+.phone{
+    margin-top: 30rpx;
+}
+.sex{
+    margin-top: -16rpx;
+    margin-left: 129rpx;
+}
+.sex text{
+    font-size: 24rpx;
+    display: inline-block;
+    width: 80rpx;
+    height: 32rpx;
+    border-radius: 16rpx;
+    line-height: 32rpx;
+    border: 1px solid #818181;
+    text-align: center;
+    margin-right: 30rpx;
+}
+.sex .on{
+    border: 1px solid #ffd663;
+    color: #ffd663;
+}
+.enter{
+    margin-top: 40rpx;
+    height: 74rpx;
+    width: 710rpx;
+    border-radius: 16rpx;
+    background-color: #ffcf3d;
+}
+.enter text{
+    font-size: 36rpx;
+    color: #fff;
+    display: block;
+    line-height: 82rpx;
+    text-align: center;
+}

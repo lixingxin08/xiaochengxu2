@@ -1,0 +1,46 @@
+<!--pages/submitOrder/submitOrder.wxml-->
+<view class="main">
+    <view class="sub-location" catchtap='toAddress'>
+        <image class="sub-location-dingwei" src="/assets/images/dingwei02.png"></image>
+        <text class="sub-location-title">卓越时代广场3栋1024</text>    
+        <text class="sub-location-phone">师太（女士） 13356875611</text>
+        <image class="sub-location-right" src="/assets/images/fanhui.png"></image>
+    </view>
+    <view class="sub-shops">
+        <image class="sub-shops-logo" src="/assets/images/shangdian.png"></image>
+        <text>卓越时代广场合家欢（NO.12021）</text>
+    </view>
+    <view class='sub-order-list' wx:for="{{goods}}" wx:key="{{index}}">
+        <image class="sub-order-list-img" src="{{item.src}}"></image>
+        <view class='sub-order-list-detail'>
+            <text class="sub-order-list-detail-title" decode="{{true}}">{{item.name}}X{{item.num}}</text>
+            <text class="sub-order-list-detail-price">￥{{item.cost}}</text>
+        </view>
+        <text class="sub-order-list-detail-sellprice">￥{{item.price}}</text>
+    </view>
+    <view class="sub-order-peisong">
+        <image src="/assets/images/peso.png"></image>
+        <text>配送方式</text>
+    </view>
+    <view class="sub-order-peisong-list">
+        <text class="{{peiso==0?'on':''}} sub-order-peisong-list-button" bindtap='togglePeiso'>商家配送</text>
+        <text class="{{peiso==1?'on':''}} sub-order-peisong-list-button" bindtap='togglePeiso'>客户自取</text>        
+    </view>
+    <view class="sub-order-peisong">
+        <image src="/assets/images/qujian.png"></image>
+        <text>取件方式</text>
+    </view>
+    <view class="sub-order-peisong-list">
+        <text  class="{{pull==0?'on':''}} sub-order-peisong-list-button" bindtap='togglePull'>上门取件</text>
+        <text  class="{{pull==1?'on':''}} sub-order-peisong-list-button" bindtap='togglePull'>客户自送</text>
+    </view>
+    <view class="sub-order-coupon">
+        <text>商家优惠卷</text>
+        <text>暂无可用</text>
+    </view>
+    <view class="dian"></view>
+</view>
+<view class="sub-order-foot">
+    <text class="sub-order-foot-total">总计:{{totalPrice}}</text>
+    <text class="sub-order-foot-sub">确认付款</text>
+</view>

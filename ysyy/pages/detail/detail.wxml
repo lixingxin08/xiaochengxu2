@@ -1,0 +1,134 @@
+<!--pages/detail/detail.wxml-->
+<view class='main'>
+    <!-- 头部搜索背景 -->
+    <view class="detail_header">
+        <image class='logo' src="/assets/images/hejiahua.png"></image> 
+        <image wx:if="{{collect}}" class="shoc" src="/assets/images/shoc01.png"></image>
+        <image wx:else class="shoc" src="/assets/images/shoc.png"></image>
+        <view class='search'>
+            <navigator url='/pages/search/search' hover-class='none'>
+                <view class="search_input" placeholder="矿泉水" bindfocus="toSearch" >
+                    矿泉水
+                <icon type="search" size="15"/> 
+                </view>    
+            </navigator>
+        </view>
+        <view class='header_shop'>
+            <text>合家欢便利店（万达店）</text>
+            <text>NO.15032</text>
+            <text class='header_shop_announcement'>公告:</text>            
+        </view>
+        <view class="header_assess">
+            <image src="/assets/images/pingfen.png"></image>
+            <text>评分:5.0</text>
+        </view>        
+    </view>
+    <view class="detail_body">
+        <!-- 左边滑动 --> 
+        <view class='detail_body_left'>
+            <scroll-view wx:scrollbars="none" class="detail_body_left_left" scroll-y style="height:710rpx;width:128rpx;" >
+                <view class="classList {{select==item.title?'on':''}}" wx:for="{{classList}}" wx:key="{{index}}" data-index="{{item.title}}" bindtap='select'>{{item.title}}</view>
+            </scroll-view>
+        </view>
+        <!-- 右边滑块 -->
+        <view class='detail_body_right'>
+            <scroll-view  scroll-y style="height:710rpx;width:100%;" >
+                <view class="goods">
+                    <view class="goodsList" wx:for="{{goods}}" wx:key="{{index}}">
+                        <navigator hover-class='none' url="/pages/list/list?title=item.name">
+                            <view class='goods_img'>
+                                <image class="goodsList_san" wx:if="{{item.class=='预定'}}" src='/assets/images/sanjiao.png'></image>
+                                <image class="goodsList_goods" src="{{item.img_url}}"></image>
+                            </view>
+                            <text class="goods_class" wx:if="{{item.class=='预定'}}">{{item.class}}</text>
+                            <view class='goods_detail'>
+                                <text class="goods_name">{{item.name}}</text>
+                                <text class="goods_content">{{item.content}}</text>
+                            </view>
+                            <view class="goods_price">
+                                <text class="goods_sellPrice priceFont">￥{{item.sellPrice}}</text>
+                            </view>
+                        </navigator>
+                        <image data-id='{{item.id}}' bindtap='addCar' data-index="{{index}}"  class="goodsList_add" src="/assets/images/jia.png"></image>
+                        <view wx:if="{{item.num>=1}}"  class="goodsList_text">{{item.num}}</view>
+                        <image wx:if="{{item.num>=1}}" class="goodsList_jian" src="/assets/images/jian.png" data-index="{{index}}" data-id='{{item.id}}' bindtap='jianCar'></image>
+                    </view>
+                </view>
+            </scroll-view>
+        </view>
+    </view>
+    <!-- 底部导航 -->
+    <view class='goodsPay'>
+        <view class="goods-car" bindtap='toggleSelectGoods'>
+            <text wx:if="{{totalNum>=1}}" class="goods-car-num">+{{totalNum}}</text>
+            <image src="/assets/images/car.png" ></image>
+            <text>共￥{{totalPrice}}</text>
+        </view>
+        <view class="goods-pay">
+            <text>立即购买</text>        
+        </view>        
+    </view>
+
+    <view class='tabBar'>
+        <view class='tabBar_nav' bindtap='toIndex'>
+            <image src="/assets/tabs/zhuye01.png"></image>
+            <text>首页</text>
+        </view>
+        <view class='tabBar_nav' bindtap='toCar'>
+            <image src="/assets/tabs/gouwuche01.png"></image>
+            <text class="car">购物车</text>
+        </view>
+        <view class='tabBar_nav' bindtap='toRecommend'>
+            <image src="/assets/tabs/yuding01.png"></image>
+            <text>预定</text>
+        </view>
+        <view class='tabBar_nav' bindtap='toProfile'>
+            <image src="/assets/tabs/wo01.png"></image>
+            <text>我的</text>
+        </view>
+    </view>
+    <view class="selectGoods"  wx:if='{{selectGoods}}'>
+        <view class="selectGoods-header pr">
+            <view class="selectGoods-header-left fl">
+                <icon  size="18" type="success" color="#ffcd46"  class="total-select" />
+                <text>全部</text>
+            </view>
+            <view bindtap='clearCar' class="selectGoods-header-right fr">
+                <image src="/assets/images/shangc.png"></image>
+                <text>清空购物车</text>
+            </view>
+        </view>
+        <view wx:if="{{carGoods.length>4}}" class="selectGoods-content">
+            <scroll-view  scroll-y style="height:324rpx;width:100%;" >
+                <view class="selectGoods-content-list" wx:for="{{carGoods}}" wx:key="{{index}}">
+                    <view class="selectGoods-content-list-left fl">
+                        <image src="{{item.img_url}}"></image>
+                        <text>{{item.name}}</text>
+                    </view>
+                    <view class="selectGoods-content-list-right">
+                            <image  data-index='{{item.id}}' bindtap='addNum'  class="goodsList_add" src="/assets/images/jia.png"></image>
+                            <view   class="goodsList_text">{{item.num}}</view>
+                            <image  data-index='{{item.id}}' bindtap='jianNum'  class="goodsList_jian" src="/assets/images/jian.png"></image>
+                    </view>
+                </view>
+            </scroll-view>
+        </view> 
+        <view wx:elif="{{carGoods.length>0}}" class="selectGoods-content">
+                <view class="selectGoods-content-list" wx:for="{{carGoods}}" wx:key="{{index}}">
+                    <view class="selectGoods-content-list-left fl">
+                        <image src="{{item.img_url}}"></image>
+                        <text>{{item.name}}</text>
+                    </view>
+                    <view class="selectGoods-content-list-right fr">
+                            <image  data-index='{{item.id}}' bindtap='addNum'   class="goodsList_add" src="/assets/images/jia.png"></image>
+                            <view   class="goodsList_text">{{item.num}}</view>
+                            <image data-index='{{item.id}}' bindtap='jianNum'  class="goodsList_jian" src="/assets/images/jian.png"></image>
+                    </view>
+                </view>
+        </view> 
+        <view wx:else class="selectGoods-content" style="font-size:26rpx;padding-left:20rpx;">还没有选择商品</view>
+        <view class="selectGoods-footer">
+            <view class="selectGoods-footer-bottom"></view>
+        </view>
+    </view>
+</view>

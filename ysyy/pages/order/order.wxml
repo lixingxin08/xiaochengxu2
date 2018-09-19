@@ -1,0 +1,33 @@
+<!--pages/order/order.wxml-->
+<view class='main'>
+    <view class="swiper-tab">  
+        <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">全部</view>  
+        <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">待付款</view>
+        <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">待发货</view>
+        <view class="swiper-tab-list {{currentTab==3 ? 'on' : ''}}" data-current="3" bindtap="swichNav">待收货</view>
+        <view class="swiper-tab-list {{currentTab==4 ? 'on' : ''}}" data-current="4" bindtap="swichNav">待评价</view>
+        <view class="swiper-tab-list {{currentTab==5 ? 'on' : ''}}" data-current="5" bindtap="swichNav">已完成</view>
+    </view>
+    <view class="order-body">
+        <view class="order-body-list" wx:for="{{shopsStates}}" wx:key="{{index}}">
+            <navigator hover-class='none' url="/pages/orderDeatil/orderDeatil">
+                <image class="order-body-list-logo" src="/assets/images/logo01.png"></image>
+                <view class="order-body-list-detail">
+                    <text class="order-body-list-detail-title">{{item.title}}</text>
+                    <text class="order-body-list-detail-phone">联系电话:{{item.phone}}</text>
+                    <text class="order-body-list-detail-content">{{item.content}}</text>
+                    <text class="order-body-list-detail-price">总价：{{item.price}}</text>
+                </view>
+                <view class="order-body-list-state">
+                    <text class="order-body-list-state-end">{{item.states==0?'订单完成':item.states==1?'待评价':item.states==2?'待付款':item.states==3?'待收货':'待发货'}}</text>
+                    <text class="order-body-list-data">下单时间:{{item.data}}</text>                
+                </view>
+                <view class="order-body-list-again fr">
+                    <navigator hover-class='none' url='{{item.states==1?"/pages/comment/comment":""}}'>
+                        <text>{{item.states==2?'立即付款':item.states==3?'确认收货':item.states==4?'催单':item.states==1?'立即评价':'再来一单'}}</text>
+                    </navigator>
+                </view>
+            </navigator>
+        </view>
+    </view>
+</view>
